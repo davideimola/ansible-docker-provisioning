@@ -1,0 +1,15 @@
+---
+- name: Creating 'docker' user
+  user:
+    name: docker
+    comment: Docker User
+    shell: /bin/bash
+
+- name: Add new partition for docker
+  parted:
+    device: /dev/sda
+    number: 2
+    state: present
+    part_start: 40GB
+    part_end: 100%
+    flags: [ lvm ]
