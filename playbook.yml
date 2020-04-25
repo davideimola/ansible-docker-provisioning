@@ -2,3 +2,7 @@
 - hosts: all
   roles:
     - role: "common"
+
+    - role: "geerlingguy.docker"
+      docker_users:
+        - docker
