@@ -1,2 +1,2 @@
 [dockerservers]
-vm01 ansible_host=192.168.188.73
+vm01 ansible_host=192.168.188.73 ansible_user=root ansible_password=osboxes.org
